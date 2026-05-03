@@ -1,0 +1,402 @@
+/* ============================================================
+   style.qss - Stylesheet Aplikasi Manajemen Inventaris
+   ============================================================ */
+
+/* ── Global ── */
+QWidget {
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-size: 13px;
+    color: #2d3748;
+    background-color: #f7f8fc;
+}
+
+QMainWindow {
+    background-color: #f7f8fc;
+}
+
+/* ── Menu Bar ── */
+QMenuBar {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    padding: 2px 4px;
+    border-bottom: 2px solid #2d7dd2;
+}
+
+QMenuBar::item {
+    padding: 6px 14px;
+    border-radius: 4px;
+    background: transparent;
+}
+
+QMenuBar::item:selected {
+    background-color: #2d7dd2;
+    color: #ffffff;
+}
+
+QMenu {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    border: 1px solid #4a5568;
+    border-radius: 4px;
+    padding: 4px 0px;
+}
+
+QMenu::item {
+    padding: 8px 20px;
+}
+
+QMenu::item:selected {
+    background-color: #2d7dd2;
+    color: #ffffff;
+}
+
+QMenu::separator {
+    height: 1px;
+    background: #4a5568;
+    margin: 4px 0px;
+}
+
+/* ── Header Panel (Identitas) ── */
+#headerPanel {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #1a202c, stop:1 #2d3748);
+    border-bottom: 3px solid #2d7dd2;
+    padding: 10px 16px;
+}
+
+#headerPanel QWidget,
+#headerPanel QLabel {
+    background: transparent;
+}
+
+#appTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background: transparent;
+}
+
+#identitasLabel {
+    font-size: 12px;
+    color: #90cdf4;
+    font-style: italic;
+    background: transparent;
+}
+
+/* ── Stats Card ── */
+#statsPanel {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px 16px;
+}
+
+#statCard {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #ebf8ff, stop:1 #bee3f8);
+    border: 1px solid #90cdf4;
+    border-radius: 8px;
+    padding: 10px 18px;
+    min-width: 130px;
+}
+
+#statValue {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2b6cb0;
+}
+
+#statLabel {
+    font-size: 11px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+/* ── Toolbar Area ── */
+#toolbarPanel {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 8px 12px;
+}
+
+/* ── Buttons ── */
+QPushButton {
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-weight: 600;
+    font-size: 13px;
+    border: none;
+    background-color: #e2e8f0;
+    color: #2d3748;
+}
+
+QPushButton:hover {
+    background-color: #cbd5e0;
+}
+
+QPushButton:pressed {
+    background-color: #a0aec0;
+}
+
+#btnTambah {
+    background-color: #2d7dd2;
+    color: #ffffff;
+}
+
+#btnTambah:hover {
+    background-color: #2563eb;
+}
+
+#btnTambah:pressed {
+    background-color: #1d4ed8;
+}
+
+#btnEdit {
+    background-color: #ed8936;
+    color: #ffffff;
+}
+
+#btnEdit:hover {
+    background-color: #dd6b20;
+}
+
+#btnHapus {
+    background-color: #e53e3e;
+    color: #ffffff;
+}
+
+#btnHapus:hover {
+    background-color: #c53030;
+}
+
+#btnRefresh {
+    background-color: #38a169;
+    color: #ffffff;
+}
+
+#btnRefresh:hover {
+    background-color: #2f855a;
+}
+
+/* ── Search Box ── */
+#searchBox {
+    border: 2px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 6px 12px;
+    background-color: #ffffff;
+    font-size: 13px;
+}
+
+#searchBox:focus {
+    border-color: #2d7dd2;
+    background-color: #ebf8ff;
+}
+
+/* ── Table ── */
+QTableWidget {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    gridline-color: #edf2f7;
+    selection-background-color: #bee3f8;
+    selection-color: #1a202c;
+    alternate-background-color: #f7fafc;
+}
+
+QTableWidget::item {
+    padding: 6px 10px;
+    border: none;
+}
+
+QTableWidget::item:selected {
+    background-color: #bee3f8;
+    color: #1a202c;
+}
+
+QHeaderView::section {
+    background-color: #1a202c;
+    color: #e2e8f0;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 8px 10px;
+    border: none;
+    border-right: 1px solid #4a5568;
+}
+
+QHeaderView::section:last {
+    border-right: none;
+}
+
+/* ── Status Bar ── */
+QStatusBar {
+    background-color: #1a202c;
+    color: #a0aec0;
+    font-size: 12px;
+    padding: 2px 8px;
+}
+
+/* ── Dialog ── */
+QDialog {
+    background-color: #f7f8fc;
+}
+
+#dialogHeader {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #1a202c, stop:1 #2d3748);
+    padding: 14px 20px;
+    border-radius: 0px;
+}
+
+#dialogTitle {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ── Form Elements ── */
+QLineEdit, QSpinBox, QDoubleSpinBox, QDateEdit, QTextEdit, QComboBox {
+    border: 2px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background-color: #ffffff;
+    color: #2d3748;
+    font-size: 13px;
+    min-height: 22px;
+}
+
+QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus,
+QDateEdit:focus, QTextEdit:focus, QComboBox:focus {
+    border-color: #2d7dd2;
+    background-color: #ebf8ff;
+}
+
+QLineEdit:read-only {
+    background-color: #edf2f7;
+    color: #718096;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 26px;
+}
+
+QComboBox::down-arrow {
+    width: 14px;
+    height: 14px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    selection-background-color: #bee3f8;
+}
+
+QSpinBox::up-button, QSpinBox::down-button,
+QDoubleSpinBox::up-button, QDoubleSpinBox::down-button {
+    width: 20px;
+    border: none;
+    background-color: #e2e8f0;
+}
+
+QSpinBox::up-button:hover, QDoubleSpinBox::up-button:hover {
+    background-color: #90cdf4;
+}
+
+QDateEdit::drop-down {
+    width: 26px;
+    border: none;
+    background-color: #e2e8f0;
+}
+
+/* ── Form Label ── */
+#formLabel {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 12px;
+}
+
+/* ── Group Box ── */
+QGroupBox {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding: 10px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 2px 10px;
+    background-color: #f7f8fc;
+    color: #2d7dd2;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ── Dialog Buttons ── */
+#btnSimpan {
+    background-color: #2d7dd2;
+    color: #ffffff;
+    min-width: 100px;
+    padding: 9px 20px;
+}
+
+#btnSimpan:hover {
+    background-color: #2563eb;
+}
+
+#btnBatal {
+    background-color: #718096;
+    color: #ffffff;
+    min-width: 100px;
+    padding: 9px 20px;
+}
+
+#btnBatal:hover {
+    background-color: #4a5568;
+}
+
+/* ── Scrollbar ── */
+QScrollBar:vertical {
+    background: #f7f8fc;
+    width: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: #cbd5e0;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #90cdf4;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background: #f7f8fc;
+    height: 10px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #cbd5e0;
+    border-radius: 5px;
+    min-width: 30px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #90cdf4;
+}
+
+/* ── Label Stok Rendah ── */
+#labelStokRendah {
+    color: #e53e3e;
+    font-weight: 700;
+}
